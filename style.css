@@ -15,6 +15,7 @@ body {
     font-size: 3.5rem;
     line-height: 1.3;
     overflow: hidden;
+    text-align: justify;
 }
 .container {
     perspective: 380px;
@@ -86,6 +87,7 @@ body {
     height: 100%;
     animation: play 80s linear forwards 2s ;
     opacity: 0;
+    text-align: center;
 }
 @keyframes play {
     0% {
@@ -126,6 +128,7 @@ p {
 @media screen and (max-width: 991px){
     .credits {
         font-size: 60%;
+
     }
     .credits {
         position: absolute;
@@ -133,7 +136,7 @@ p {
         left: 50%;
         transform: translateX(-50%);
         height: 100%;
-        animation: play 80s linear forwards 5s ;
+        animation: play 80s linear forwards 8s ;
         opacity: 0;
     }
     @keyframes play {
