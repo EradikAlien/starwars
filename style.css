@@ -1,21 +1,20 @@
 /*Computer*/
 
-    
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    background-image: url(bg.jpg);
+    background-image: url(bg2.jpg);
     background-position-x: center;
-    background-size: cover;
+    background-size: cover; 
+    max-width: 100%;
     color: #ffbe00;
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     font-size: 3.5rem;
     line-height: 1.3;
     overflow: hidden;
-    display: block;
 }
 .container {
     perspective: 380px;
@@ -27,45 +26,6 @@ body {
     right: 0;
     overflow: visible;
     transform: scaleY(0.9);
-}
-.credits {
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    animation: play 80s linear forwards ;
-    opacity: 0;
-}
-.headings {
-    margin-bottom: 5rem;
-}
-h1 {
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-}
-h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: center;
-}
-p {
-    padding: 0.5rem 0;
-}
-@keyframes play {
-    0% {
-        transform: rotateX(21deg) translate3d(0, 100rem, 0) translateX(-50%);
-        opacity: 1;
-    }
-    99% {
-        opacity: 1;
-    }
-    100% {
-        transform: rotateX(21deg) translate3d(0, -150rem, 0) translateX(-50%);
-        opacity: 0;
-    }
-
 }
 .intro {
     position: absolute;
@@ -100,12 +60,13 @@ p {
     transform: translate(-50%,-50%);
     z-index: 1;
     margin: auto;
+    padding: auto;
     animation: logo 9s ease-out 9s;
     opacity: 0;
 }
 @keyframes logo {
     0% {
-        transform: translate(-50%,-50%) scale(5);
+        transform: translate(-50%,-50%) scale(3);
         opacity: 1;
     }
     50% {
@@ -117,6 +78,76 @@ p {
 
     }
 }
+.credits {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    animation: play 80s linear forwards 2s ;
+    opacity: 0;
+}
+@keyframes play {
+    0% {
+        transform: rotateX(21deg) translate3d(0, 100rem, 0) translateX(-50%);
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(21deg) translate3d(0, -200rem, 0) translateX(-50%);
+        opacity: 0;
+    }
 
+}
+.headings {
+    margin-bottom: 5rem;
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+p {
+    padding: 0.5rem 0;
+}
 
-/*Phone*/
+@media only screen and (max-width: 767px){
+    .credits {
+        font-size: 50%;
+}
+}
+@media screen and (max-width: 991px){
+    .credits {
+        font-size: 60%;
+    }
+    .credits {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        animation: play 80s linear forwards 5s ;
+        opacity: 0;
+    }
+    @keyframes play {
+        0% {
+            transform: rotateX(21deg) translate3d(0, 100rem, 0) translateX(-50%);
+            opacity: 1;
+        }
+        85% {
+            opacity: 1;
+        }
+        100% {
+            transform: rotateX(21deg) translate3d(0, -200rem, 0) translateX(-50%);
+            opacity: 0;
+        }
+    
+    }
+}
